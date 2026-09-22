@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PCI/SC Downloader de Relatórios Digitais</title>
-<meta name="description" content="Aplicativo oficial da Polícia Científica de Santa Catarina para download de laudos periciais digitais.">
+<title>Política de Privacidade — PCI/SC Downloader de Relatórios Digitais</title>
+<meta name="description" content="Política de Privacidade do PCI/SC Downloader de Relatórios Digitais, aplicativo da Polícia Científica de Santa Catarina.">
+
 <style>
   :root {
     --bg: #0D1117;
@@ -71,14 +72,13 @@
     font-size: 34px;
     line-height: 1.2;
     letter-spacing: -0.01em;
-    margin: 0 0 20px;
-    max-width: 18ch;
+    margin: 0 0 12px;
+    max-width: 22ch;
   }
 
-  .lede {
-    font-size: 17px;
-    color: var(--text-secondary);
-    max-width: 62ch;
+  .updated {
+    font-size: 13px;
+    color: var(--text-muted);
     margin: 0 0 48px;
   }
 
@@ -89,36 +89,52 @@
     margin: 56px 0 16px;
   }
 
-  p { color: var(--text-secondary); max-width: 62ch; }
-
-  .steps {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    counter-reset: step;
-    border-top: 1px solid var(--border);
+  h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 32px 0 12px;
   }
 
-  .steps li {
-    counter-increment: step;
-    padding: 18px 0;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    gap: 16px;
-    align-items: baseline;
+  p {
+    color: var(--text-secondary);
+    max-width: 62ch;
   }
 
-  .steps li::before {
-    content: counter(step);
+  ul,
+  ol {
+    color: var(--text-secondary);
+    padding-left: 24px;
+    max-width: 62ch;
+  }
+
+  li {
+    margin-bottom: 9px;
+  }
+
+  strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  code {
     font-family: "SFMono-Regular", Consolas, monospace;
-    color: var(--accent);
     font-size: 13px;
-    width: 20px;
-    flex-shrink: 0;
+    color: var(--text-primary);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2px 5px;
   }
 
-  .steps strong { color: var(--text-primary); font-weight: 600; }
-  .steps span { color: var(--text-secondary); font-size: 14px; }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
 
   .card {
     background: var(--surface);
@@ -128,17 +144,36 @@
     margin-top: 12px;
   }
 
-  .card p:last-child { margin-bottom: 0; }
+  .card p:last-child {
+    margin-bottom: 0;
+  }
 
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
+  .contact {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 0;
+    margin-top: 16px;
+  }
 
-  .meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 20px;
-    font-size: 13px;
-    color: var(--text-muted);
+  .contact p {
+    margin: 4px 0;
+  }
+
+  .privacy-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .privacy-list li {
+    padding-left: 18px;
+    position: relative;
+  }
+
+  .privacy-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
   }
 
   footer {
@@ -149,61 +184,396 @@
     color: var(--text-muted);
   }
 
-  footer a { color: var(--text-secondary); }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+  }
+
+  footer a {
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 600px) {
+    .wrap {
+      padding: 40px 20px 64px;
+    }
+
+    header {
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 28px;
+    }
+  }
 </style>
 </head>
+
 <body>
   <div class="wrap">
+
     <header>
-      <div class="badge">PCI</div>
+      <a href="index.html" style="text-decoration: none;">
+        <div class="badge">PCI</div>
+      </a>
+
       <div>
         <p class="org-name">Polícia Científica de Santa Catarina</p>
         <p class="app-name">PCI/SC Downloader de Relatórios Digitais</p>
       </div>
     </header>
 
-    <h1>Baixe laudos periciais direto do link que você recebe por e-mail</h1>
-    <p class="lede">
-      Aplicativo de desktop para Windows usado por peritos, servidores e órgãos
-      parceiros para baixar, descompactar e validar a integridade dos laudos
-      digitais disponibilizados pela Polícia Científica de Santa Catarina.
+    <h1>Política de Privacidade</h1>
+
+    <p class="updated">
+      Última atualização: 22/09/2026
     </p>
 
-    <h2>Como funciona</h2>
-    <ol class="steps">
-      <li><strong>Cole o link</strong><span>recebido por e-mail junto com o laudo</span></li>
-      <li><strong>Autentique-se</strong><span>com sua Conta Google, usada só para ler o arquivo do link informado</span></li>
-      <li><strong>Baixe e descompacte</strong><span>automaticamente, com verificação de espaço em disco</span></li>
-      <li><strong>Valide a integridade</strong><span>opcionalmente, conferindo o hash SHA-256 de cada arquivo</span></li>
-    </ol>
+    <p>
+      Esta Política de Privacidade descreve como o aplicativo
+      <strong>PCI/SC Downloader de Relatórios Digitais</strong>
+      ("o Aplicativo"), desenvolvido pela
+      <strong>Polícia Científica de Santa Catarina</strong>
+      ("nós", "a Instituição"), coleta, usa, armazena e protege dados
+      ao ser utilizado.
+    </p>
 
-    <h2>Privacidade e segurança</h2>
-    <div class="card">
+    <p>
+      O Aplicativo foi desenvolvido para permitir que peritos, servidores
+      e demais usuários autorizados baixem, descompactem e validem a
+      integridade de relatórios digitais (laudos periciais) disponibilizados
+      pela Polícia Científica de Santa Catarina através do Google Drive.
+    </p>
+
+
+    <h2>1. Quem é o responsável pelo tratamento dos dados</h2>
+
+    <div class="card contact">
+      <p><strong>Encarregado pelo Tratamento de Dados</strong></p>
+      <p>Douglas Bayer Santos</p>
+      <p>Ato nº 1080/2024, DOE nº 22294-A</p>
       <p>
-        O aplicativo não possui servidor próprio: toda comunicação acontece
-        diretamente entre o computador do usuário e as APIs do Google. O acesso
-        ao Google Drive é somente leitura, restrito aos arquivos do link
-        informado — nunca à conta inteira do usuário.
+        <a href="mailto:dpo@policiacientifica.sc.gov.br">
+          dpo@policiacientifica.sc.gov.br
+        </a>
       </p>
+      <p>(48) 3665-8554</p>
       <p>
-        Detalhes completos em nossa <a href="privacidade.html">Política de Privacidade</a>.
+        Av. Governador Ivo Silveira, 1521 – Capoeiras,
+        Florianópolis/SC
       </p>
     </div>
 
-    <h2>Download</h2>
+
+    <h2>2. Quais dados o Aplicativo coleta e por quê</h2>
+
+    <h3>2.1. Dados da sua Conta Google</h3>
+
     <p>
-      O aplicativo é distribuído para uso institucional. Para obter o instalador
-      ou mais informações, entre em contato através dos canais oficiais da
+      Para baixar arquivos do Google Drive, o Aplicativo solicita que você
+      faça login com sua Conta Google. Ao autorizar, coletamos e armazenamos
+      <strong>localmente, no seu computador</strong>:
+    </p>
+
+    <ul class="privacy-list">
+      <li>Nome e e-mail associados à Conta Google;</li>
+      <li>Foto de perfil, se disponível publicamente;</li>
+      <li>
+        Um token de autenticação (<em>refresh token</em>), que permite
+        manter você conectado sem precisar fazer login novamente a cada uso.
+      </li>
+    </ul>
+
+    <p>
+      O Aplicativo solicita apenas a permissão de
+      <strong>leitura</strong> no Google Drive
+      (<code>drive.readonly</code>). Isso significa que o Aplicativo:
+    </p>
+
+    <ul class="privacy-list">
+      <li>
+        <strong>Não pode</strong> modificar, excluir ou criar arquivos
+        no seu Google Drive;
+      </li>
+      <li>
+        <strong>Não acessa</strong> todo o seu Google Drive — apenas os
+        arquivos/pastas específicos apontados pelos links de laudo que
+        você mesmo informar;
+      </li>
+      <li>
+        <strong>Não compartilha</strong> essas informações com terceiros,
+        exceto com o próprio Google, como parte necessária do processo
+        de autenticação.
+      </li>
+    </ul>
+
+
+    <h3>2.2. Link do laudo, senha do arquivo compactado e pasta de destino</h3>
+
+    <p>
+      Você fornece manualmente, a cada uso:
+    </p>
+
+    <ul class="privacy-list">
+      <li>O link do laudo recebido por e-mail;</li>
+      <li>
+        A senha do arquivo compactado, fornecida pela Polícia Científica
+        junto ao laudo;
+      </li>
+      <li>
+        A pasta no seu computador onde deseja salvar os arquivos.
+      </li>
+    </ul>
+
+    <p>
+      Essas informações são usadas <strong>apenas localmente</strong>,
+      durante a execução do download e da extração, e
+      <strong>não são enviadas a nenhum servidor nosso</strong>.
+      O Aplicativo não possui servidor próprio; ele se comunica diretamente
+      com os servidores do Google.
+    </p>
+
+
+    <h3>2.3. Dados armazenados localmente no seu computador</h3>
+
+    <p>
+      Para funcionar corretamente entre uma sessão e outra, o Aplicativo
+      grava, apenas no seu próprio computador (nunca em servidores externos):
+    </p>
+
+    <ul class="privacy-list">
+      <li>
+        O token de autenticação do Google, protegido por criptografia
+        do próprio Windows (DPAPI), vinculada ao seu usuário do Windows;
+      </li>
+      <li>
+        Um arquivo de "checkpoint" de sessão, usado para retomar downloads
+        interrompidos (contém o link, a pasta de destino e a lista de
+        arquivos — <strong>nunca a senha</strong>);
+      </li>
+      <li>
+        Preferências simples do aplicativo, como a resposta à pergunta
+        sobre criação de um atalho na área de trabalho.
+      </li>
+    </ul>
+
+    <p>
+      Esses arquivos ficam na pasta
+      <code>%LOCALAPPDATA%\PciDownloader\</code>
+      do seu perfil do Windows e são removidos automaticamente ao concluir
+      um processo com sucesso (no caso do checkpoint), ou permanecem até
+      você desinstalar o Aplicativo ou desconectar sua conta.
+    </p>
+
+
+    <h3>2.4. Registro de ações (log) — exportação manual e opcional</h3>
+
+    <p>
+      O Aplicativo mantém, durante a execução, um histórico técnico das
+      ações realizadas, como validações, downloads e erros, para fins
+      de diagnóstico.
+    </p>
+
+    <p>
+      Esse registro <strong>só sai do seu computador se você mesmo decidir
+      exportá-lo</strong>, através da opção "Exportar registro de ações",
+      em Configurações, com o objetivo de enviá-lo à Polícia Científica
+      em caso de erro.
+    </p>
+
+    <p>Esse arquivo:</p>
+
+    <ul class="privacy-list">
+      <li>
+        É criptografado (RSA + AES) antes de ser salvo, de forma que
+        <strong>somente a equipe de desenvolvimento</strong>, com a chave
+        privada correspondente, consegue abri-lo;
+      </li>
+      <li>
+        Pode conter dados sensíveis inseridos por você durante o uso,
+        como a senha do arquivo compactado e o link do laudo, incluídos
+        de propósito para permitir diagnóstico técnico preciso;
+      </li>
+      <li>
+        Nunca é enviado automaticamente pelo Aplicativo — o envio,
+        por exemplo por e-mail, é sempre uma ação manual sua.
+      </li>
+    </ul>
+
+
+    <h2>3. Uso dos Dados do Google (Google API Services User Data Policy)</h2>
+
+    <p>
+      O uso e a transferência, pelo Aplicativo, de informações recebidas
+      das APIs do Google seguem a
+      <a href="https://developers.google.com/terms/api-services-user-data-policy"
+         target="_blank"
+         rel="noopener noreferrer">
+        Política de Dados do Usuário dos Serviços de API do Google
+      </a>,
+      incluindo os requisitos de Uso Limitado (<em>Limited Use</em>).
+    </p>
+
+    <ul class="privacy-list">
+      <li>
+        Os dados obtidos através da API do Google Drive são usados
+        <strong>exclusivamente</strong> para permitir que você baixe os
+        arquivos de laudo autorizados;
+      </li>
+      <li>Esses dados não são usados para publicidade;</li>
+      <li>
+        Esses dados não são vendidos, alugados ou compartilhados
+        com terceiros;
+      </li>
+      <li>
+        Esses dados não são utilizados para treinar modelos de
+        inteligência artificial ou aprendizado de máquina;
+      </li>
+      <li>
+        Nenhum humano, exceto você mesmo, tem acesso ao conteúdo dos
+        arquivos baixados através do Aplicativo.
+      </li>
+    </ul>
+
+
+    <h2>4. Por quanto tempo os dados ficam armazenados</h2>
+
+    <ul class="privacy-list">
+      <li>
+        <strong>Token de autenticação Google:</strong>
+        até você clicar em "Desconectar", em Configurações, ou
+        desinstalar o Aplicativo;
+      </li>
+      <li>
+        <strong>Checkpoint de sessão:</strong>
+        até a conclusão bem-sucedida do processo de download, ou até
+        você optar por descartá-lo manualmente;
+      </li>
+      <li>
+        <strong>Link, senha e pasta de destino informados:</strong>
+        mantidos apenas em memória durante a execução; não persistem
+        após o fechamento do Aplicativo, exceto se você optar por
+        exportar o registro de ações, conforme descrito no item 2.4.
+      </li>
+    </ul>
+
+
+    <h2>5. Como revogar o acesso do Aplicativo à sua Conta Google</h2>
+
+    <p>
+      Você pode revogar o acesso a qualquer momento de duas formas:
+    </p>
+
+    <ol>
+      <li>
+        <strong>Dentro do Aplicativo:</strong>
+        Configurações → Conta Google → "Desconectar".
+      </li>
+
+      <li>
+        <strong>Diretamente pelo Google:</strong>
+        acesse
+        <a href="https://myaccount.google.com/permissions"
+           target="_blank"
+           rel="noopener noreferrer">
+          myaccount.google.com/permissions
+        </a>,
+        localize "PCI/SC Downloader de Relatórios Digitais" na lista
+        de apps conectados e remova o acesso.
+      </li>
+    </ol>
+
+
+    <h2>6. Seus direitos (Lei Geral de Proteção de Dados — Lei nº 13.709/2018)</h2>
+
+    <p>
+      Como titular dos dados, você tem direito a, mediante solicitação
+      ao contato indicado na seção 1:
+    </p>
+
+    <ul class="privacy-list">
+      <li>Confirmar a existência de tratamento dos seus dados;</li>
+      <li>Acessar os dados armazenados;</li>
+      <li>Corrigir dados incompletos, inexatos ou desatualizados;</li>
+      <li>
+        Solicitar a exclusão de dados tratados com o seu consentimento;
+      </li>
+      <li>Revogar o consentimento a qualquer momento.</li>
+    </ul>
+
+
+    <h2>7. Segurança</h2>
+
+    <ul class="privacy-list">
+      <li>
+        O token de autenticação é armazenado criptografado via DPAPI
+        (Data Protection API do Windows), vinculado ao seu usuário do
+        sistema operacional — ilegível por qualquer outro usuário ou
+        computador;
+      </li>
+      <li>
+        O registro de ações exportável é protegido por criptografia
+        híbrida RSA-2048 + AES-256;
+      </li>
+      <li>
+        A comunicação com os servidores do Google ocorre exclusivamente
+        via HTTPS/TLS.
+      </li>
+    </ul>
+
+
+    <h2>8. Uso por menores de idade</h2>
+
+    <p>
+      O Aplicativo é destinado a uso profissional/institucional por
+      peritos e servidores da Polícia Científica de Santa Catarina e
+      de outros órgãos autorizados, não sendo direcionado a menores
+      de idade.
+    </p>
+
+
+    <h2>9. Alterações a esta Política</h2>
+
+    <p>
+      Esta Política pode ser atualizada periodicamente. A data da última
+      atualização está indicada no topo deste documento. Alterações
+      significativas serão comunicadas através dos canais oficiais da
       Polícia Científica de Santa Catarina.
     </p>
+
+
+    <h2>10. Contato</h2>
+
+    <p>
+      Dúvidas sobre esta Política de Privacidade ou sobre o tratamento
+      de dados pelo Aplicativo podem ser enviadas para:
+    </p>
+
+    <div class="card">
+      <p>
+        <a href="mailto:rafael.schneider@policiacientifica.sc.gov.br">
+          rafael.schneider@policiacientifica.sc.gov.br
+        </a>
+      </p>
+    </div>
+
 
     <footer>
       <div class="meta">
         <span>Polícia Científica de Santa Catarina</span>
+        <span><a href="index.html">PCI/SC Downloader</a></span>
         <span><a href="privacidade.html">Política de Privacidade</a></span>
-        <span><a href="https://www.policiacientifica.sc.gov.br">policiacientifica.sc.gov.br</a></span>
+        <span>
+          <a href="https://www.policiacientifica.sc.gov.br"
+             target="_blank"
+             rel="noopener noreferrer">
+            policiacientifica.sc.gov.br
+          </a>
+        </span>
       </div>
     </footer>
+
   </div>
 </body>
 </html>
