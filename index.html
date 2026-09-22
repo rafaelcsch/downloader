@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PCI/SC Downloader de Relatórios Digitais</title>
+<meta name="description" content="Aplicativo oficial da Polícia Científica de Santa Catarina para download de laudos periciais digitais.">
+<style>
+  :root {
+    --bg: #0D1117;
+    --surface: #161B22;
+    --border: #232B36;
+    --accent: #3B9EFF;
+    --success: #2ED9A8;
+    --text-primary: #E6EDF3;
+    --text-secondary: #8B96A5;
+    --text-muted: #5A6472;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: -apple-system, "Segoe UI", "Segoe UI Variable", system-ui, sans-serif;
+    line-height: 1.6;
+  }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 56px;
+  }
+
+  .badge {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+
+  .org-name {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin: 0 0 2px;
+  }
+
+  .app-name {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 34px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 0 0 20px;
+    max-width: 18ch;
+  }
+
+  .lede {
+    font-size: 17px;
+    color: var(--text-secondary);
+    max-width: 62ch;
+    margin: 0 0 48px;
+  }
+
+  h2 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 56px 0 16px;
+  }
+
+  p { color: var(--text-secondary); max-width: 62ch; }
+
+  .steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: step;
+    border-top: 1px solid var(--border);
+  }
+
+  .steps li {
+    counter-increment: step;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 16px;
+    align-items: baseline;
+  }
+
+  .steps li::before {
+    content: counter(step);
+    font-family: "SFMono-Regular", Consolas, monospace;
+    color: var(--accent);
+    font-size: 13px;
+    width: 20px;
+    flex-shrink: 0;
+  }
+
+  .steps strong { color: var(--text-primary); font-weight: 600; }
+  .steps span { color: var(--text-secondary); font-size: 14px; }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-top: 12px;
+  }
+
+  .card p:last-child { margin-bottom: 0; }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  footer {
+    margin-top: 72px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  footer a { color: var(--text-secondary); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="badge">PCI</div>
+      <div>
+        <p class="org-name">Polícia Científica de Santa Catarina</p>
+        <p class="app-name">PCI/SC Downloader de Relatórios Digitais</p>
+      </div>
+    </header>
+
+    <h1>Baixe laudos periciais direto do link que você recebe por e-mail</h1>
+    <p class="lede">
+      Aplicativo de desktop para Windows usado por peritos, servidores e órgãos
+      parceiros para baixar, descompactar e validar a integridade dos laudos
+      digitais disponibilizados pela Polícia Científica de Santa Catarina.
+    </p>
+
+    <h2>Como funciona</h2>
+    <ol class="steps">
+      <li><strong>Cole o link</strong><span>recebido por e-mail junto com o laudo</span></li>
+      <li><strong>Autentique-se</strong><span>com sua Conta Google, usada só para ler o arquivo do link informado</span></li>
+      <li><strong>Baixe e descompacte</strong><span>automaticamente, com verificação de espaço em disco</span></li>
+      <li><strong>Valide a integridade</strong><span>opcionalmente, conferindo o hash SHA-256 de cada arquivo</span></li>
+    </ol>
+
+    <h2>Privacidade e segurança</h2>
+    <div class="card">
+      <p>
+        O aplicativo não possui servidor próprio: toda comunicação acontece
+        diretamente entre o computador do usuário e as APIs do Google. O acesso
+        ao Google Drive é somente leitura, restrito aos arquivos do link
+        informado — nunca à conta inteira do usuário.
+      </p>
+      <p>
+        Detalhes completos em nossa <a href="privacidade.html">Política de Privacidade</a>.
+      </p>
+    </div>
+
+    <h2>Download</h2>
+    <p>
+      O aplicativo é distribuído para uso institucional. Para obter o instalador
+      ou mais informações, entre em contato através dos canais oficiais da
+      Polícia Científica de Santa Catarina.
+    </p>
+
+    <footer>
+      <div class="meta">
+        <span>Polícia Científica de Santa Catarina</span>
+        <span><a href="privacidade.html">Política de Privacidade</a></span>
+        <span><a href="https://www.policiacientifica.sc.gov.br">policiacientifica.sc.gov.br</a></span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
