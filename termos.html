@@ -1,0 +1,469 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Termos de Serviço — PCI/SC Downloader de Relatórios Digitais</title>
+<meta name="description" content="Termos de Serviço do PCI/SC Downloader de Relatórios Digitais, aplicativo da Polícia Científica de Santa Catarina.">
+
+<style>
+  :root {
+    --bg: #0D1117;
+    --surface: #161B22;
+    --border: #232B36;
+    --accent: #3B9EFF;
+    --success: #2ED9A8;
+    --text-primary: #E6EDF3;
+    --text-secondary: #8B96A5;
+    --text-muted: #5A6472;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: -apple-system, "Segoe UI", "Segoe UI Variable", system-ui, sans-serif;
+    line-height: 1.6;
+  }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 56px;
+  }
+
+  .badge {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+
+  .org-name {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin: 0 0 2px;
+  }
+
+  .app-name {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 34px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 0 0 12px;
+    max-width: 22ch;
+  }
+
+  .updated {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 0 0 48px;
+  }
+
+  h2 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 56px 0 16px;
+  }
+
+  p {
+    color: var(--text-secondary);
+    max-width: 62ch;
+  }
+
+  ul,
+  ol {
+    color: var(--text-secondary);
+    padding-left: 24px;
+    max-width: 62ch;
+  }
+
+  li {
+    margin-bottom: 9px;
+  }
+
+  strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-top: 12px;
+  }
+
+  .card p:last-child {
+    margin-bottom: 0;
+  }
+
+  footer {
+    margin-top: 72px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+  }
+
+  footer a {
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 600px) {
+    .wrap {
+      padding: 40px 20px 64px;
+    }
+
+    header {
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 28px;
+    }
+  }
+</style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header>
+      <a href="index.html" style="text-decoration: none;">
+        <div class="badge">PCI</div>
+      </a>
+
+      <div>
+        <p class="org-name">Polícia Científica de Santa Catarina</p>
+        <p class="app-name">PCI/SC Downloader de Relatórios Digitais</p>
+      </div>
+    </header>
+
+    <h1>Termos de Serviço</h1>
+
+    <p class="updated">
+      Última atualização: 22/09/2026
+    </p>
+
+    <p>
+      Estes Termos de Serviço estabelecem as condições para utilização do
+      aplicativo <strong>PCI/SC Downloader de Relatórios Digitais</strong>
+      ("Aplicativo"), desenvolvido pela
+      <strong>Polícia Científica de Santa Catarina</strong>.
+    </p>
+
+    <p>
+      Ao utilizar o Aplicativo, o usuário declara estar ciente destes Termos
+      e concordar com as condições aqui estabelecidas.
+    </p>
+
+
+    <h2>1. Finalidade do Aplicativo</h2>
+
+    <p>
+      O PCI/SC Downloader de Relatórios Digitais é um aplicativo de desktop
+      para Windows destinado a facilitar o download, a descompactação e a
+      validação da integridade de relatórios digitais e laudos periciais
+      disponibilizados pela Polícia Científica de Santa Catarina.
+    </p>
+
+    <p>
+      O Aplicativo é destinado principalmente a peritos, servidores e demais
+      usuários autorizados pela Polícia Científica de Santa Catarina ou por
+      órgãos parceiros.
+    </p>
+
+
+    <h2>2. Requisitos para utilização</h2>
+
+    <p>
+      Para utilizar determinadas funcionalidades do Aplicativo, o usuário
+      deverá:
+    </p>
+
+    <ul>
+      <li>
+        possuir uma Conta Google válida, quando necessária para acesso aos
+        arquivos disponibilizados no Google Drive;
+      </li>
+      <li>
+        possuir autorização para acessar e baixar os relatórios ou arquivos
+        correspondentes ao link fornecido;
+      </li>
+      <li>
+        fornecer corretamente o link do arquivo ou pasta disponibilizado
+        pela Polícia Científica;
+      </li>
+      <li>
+        possuir a senha do arquivo compactado quando esta for necessária
+        para sua extração.
+      </li>
+    </ul>
+
+
+    <h2>3. Uso da Conta Google</h2>
+
+    <p>
+      O Aplicativo utiliza serviços e APIs do Google para localizar e baixar
+      os arquivos autorizados pelo usuário.
+    </p>
+
+    <p>
+      O acesso ao Google Drive é realizado mediante autorização do usuário
+      e utiliza somente as permissões necessárias ao funcionamento do
+      Aplicativo.
+    </p>
+
+    <p>
+      O Aplicativo não possui acesso para criar, alterar ou excluir arquivos
+      no Google Drive do usuário quando utilizado exclusivamente com a
+      permissão de leitura.
+    </p>
+
+    <p>
+      O uso de informações provenientes das APIs do Google também está
+      sujeito à
+      <a href="https://developers.google.com/terms/api-services-user-data-policy"
+         target="_blank"
+         rel="noopener noreferrer">
+        Política de Dados do Usuário dos Serviços de API do Google
+      </a>.
+    </p>
+
+
+    <h2>4. Responsabilidade do usuário</h2>
+
+    <p>
+      O usuário é responsável por utilizar o Aplicativo somente para
+      finalidades legítimas e de acordo com suas atribuições funcionais
+      e autorizações de acesso.
+    </p>
+
+    <p>
+      O usuário também é responsável por manter em segurança suas credenciais,
+      senhas, arquivos baixados e demais informações acessadas durante a
+      utilização do Aplicativo.
+    </p>
+
+    <p>
+      O usuário não deverá utilizar o Aplicativo para acessar, baixar,
+      distribuir ou compartilhar arquivos para os quais não possua
+      autorização.
+    </p>
+
+
+    <h2>5. Arquivos e conteúdo dos relatórios</h2>
+
+    <p>
+      O Aplicativo atua como uma ferramenta de transferência, descompactação
+      e validação de arquivos. O conteúdo dos relatórios e demais arquivos
+      disponibilizados por meio do Google Drive não é criado ou modificado
+      pelo Aplicativo.
+    </p>
+
+    <p>
+      Após o download, os arquivos são armazenados no computador do usuário,
+      na pasta de destino escolhida por ele.
+    </p>
+
+    <p>
+      O usuário é responsável pelo armazenamento, tratamento, utilização e
+      eventual compartilhamento dos arquivos após seu download, observadas
+      as normas legais, funcionais e institucionais aplicáveis.
+    </p>
+
+
+    <h2>6. Segurança e privacidade</h2>
+
+    <p>
+      O Aplicativo foi desenvolvido buscando reduzir a exposição das
+      informações utilizadas durante seu funcionamento.
+    </p>
+
+    <p>
+      As informações de autenticação armazenadas localmente são protegidas
+      por mecanismos de segurança do sistema operacional Windows, e a
+      comunicação com os serviços do Google ocorre por conexões seguras.
+    </p>
+
+    <p>
+      As informações detalhadas sobre coleta, armazenamento, utilização e
+      proteção de dados estão disponíveis na
+      <a href="privacidade.html">
+        Política de Privacidade
+      </a>.
+    </p>
+
+
+    <h2>7. Disponibilidade do serviço</h2>
+
+    <p>
+      O funcionamento do Aplicativo depende, entre outros fatores, da
+      disponibilidade do sistema operacional, da conexão de internet,
+      dos serviços do Google e da disponibilidade dos arquivos
+      disponibilizados pela Polícia Científica.
+    </p>
+
+    <p>
+      Por esse motivo, não é garantido que o download esteja disponível
+      continuamente ou que determinado arquivo possa ser baixado em
+      qualquer momento.
+    </p>
+
+
+    <h2>8. Atualizações do Aplicativo</h2>
+
+    <p>
+      A Polícia Científica de Santa Catarina poderá disponibilizar atualizações
+      do Aplicativo para corrigir erros, melhorar sua segurança, adicionar
+      funcionalidades ou adequá-lo a alterações nos serviços utilizados.
+    </p>
+
+    <p>
+      Recomenda-se utilizar sempre uma versão atualizada do Aplicativo
+      disponibilizada pelos canais oficiais.
+    </p>
+
+
+    <h2>9. Propriedade e uso institucional</h2>
+
+    <p>
+      O Aplicativo é uma ferramenta desenvolvida para uso institucional
+      relacionado às atividades da Polícia Científica de Santa Catarina.
+    </p>
+
+    <p>
+      O nome, a identidade visual, os documentos, relatórios e demais
+      conteúdos disponibilizados por meio dos sistemas institucionais
+      permanecem sujeitos aos respectivos direitos, normas e restrições
+      aplicáveis.
+    </p>
+
+
+    <h2>10. Suspensão ou encerramento do acesso</h2>
+
+    <p>
+      O acesso ou a utilização do Aplicativo poderá ser interrompido quando
+      necessário por razões de segurança, manutenção, alteração dos serviços
+      utilizados ou determinação administrativa.
+    </p>
+
+    <p>
+      O usuário também poderá deixar de utilizar o Aplicativo a qualquer
+      momento e revogar sua autorização de acesso à Conta Google.
+    </p>
+
+
+    <h2>11. Alterações destes Termos</h2>
+
+    <p>
+      Estes Termos de Serviço poderão ser atualizados periodicamente para
+      refletir alterações no Aplicativo, nos serviços utilizados ou nas
+      exigências legais e institucionais aplicáveis.
+    </p>
+
+    <p>
+      A data da última atualização será indicada no início deste documento.
+      Alterações significativas poderão ser comunicadas através dos canais
+      oficiais da Polícia Científica de Santa Catarina.
+    </p>
+
+
+    <h2>12. Contato</h2>
+
+    <p>
+      Para dúvidas relacionadas ao Aplicativo ou a estes Termos de Serviço,
+      entre em contato através dos canais oficiais da Polícia Científica
+      de Santa Catarina.
+    </p>
+
+    <div class="card">
+      <p>
+        <a href="mailto:rafael.schneider@policiacientifica.sc.gov.br">
+          rafael.schneider@policiacientifica.sc.gov.br
+        </a>
+      </p>
+
+      <p>
+        Polícia Científica de Santa Catarina
+      </p>
+    </div>
+
+
+    <footer>
+      <div class="meta">
+        <span>Polícia Científica de Santa Catarina</span>
+
+        <span>
+          <a href="index.html">
+            PCI/SC Downloader
+          </a>
+        </span>
+
+        <span>
+          <a href="privacidade.html">
+            Política de Privacidade
+          </a>
+        </span>
+
+        <span>
+          <a href="termos.html">
+            Termos de Serviço
+          </a>
+        </span>
+
+        <span>
+          <a href="https://www.policiacientifica.sc.gov.br"
+             target="_blank"
+             rel="noopener noreferrer">
+            policiacientifica.sc.gov.br
+          </a>
+        </span>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
+```
