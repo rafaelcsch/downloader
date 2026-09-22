@@ -1,0 +1,134 @@
+# Política de Privacidade — PCI/SC Downloader de Relatórios Digitais
+
+**Última atualização: 22/09/2026**
+
+Esta Política de Privacidade descreve como o aplicativo **PCI/SC Downloader de Relatórios Digitais** ("o Aplicativo"), desenvolvido pela **Polícia Científica de Santa Catarina** ("nós", "a Instituição"), coleta, usa, armazena e protege dados ao ser utilizado.
+
+O Aplicativo foi desenvolvido para permitir que peritos, servidores e demais usuários autorizados baixem, descompactem e validem a integridade de relatórios digitais (laudos periciais) disponibilizados pela Polícia Científica de Santa Catarina através do Google Drive.
+
+---
+
+## 1. Quem é o responsável pelo tratamento dos dados
+
+
+Encarregado pelo Tratamento de Dados:
+Douglas Bayer Santos
+Ato nº 1080/2024, DOE nº 22294-A
+dpo@policiacientifica.sc.gov.br
+(48) 3665-8554
+Av. Governador Ivo Silveira, 1521 – Capoeiras, Florianópolis/SC
+
+---
+
+## 2. Quais dados o Aplicativo coleta e por quê
+
+### 2.1. Dados da sua Conta Google
+
+Para baixar arquivos do Google Drive, o Aplicativo solicita que você faça login com sua Conta Google. Ao autorizar, coletamos e armazenamos **localmente, no seu computador**:
+
+- Nome e e-mail associados à Conta Google
+- Foto de perfil (se disponível publicamente)
+- Um token de autenticação (*refresh token*), que permite manter você conectado sem precisar logar novamente a cada uso
+
+O Aplicativo solicita **apenas** a permissão de **leitura** no Google Drive (`drive.readonly`). Isso significa que o Aplicativo:
+
+- **Não pode** modificar, excluir ou criar arquivos no seu Google Drive
+- **Não acessa** todo o seu Google Drive — apenas os arquivos/pastas específicos apontados pelos links de laudo que você mesmo informar
+- **Não compartilha** essas informações com terceiros, exceto com o próprio Google, como parte necessária do processo de autenticação
+
+### 2.2. Link do laudo, senha do arquivo compactado e pasta de destino
+
+Você fornece manualmente, a cada uso:
+
+- O link do laudo recebido por e-mail
+- A senha do arquivo compactado (fornecida pela Polícia Científica junto ao laudo)
+- A pasta no seu computador onde deseja salvar os arquivos
+
+Essas informações são usadas **apenas localmente**, durante a execução do download/extração, e **não são enviadas a nenhum servidor nosso** — o Aplicativo não possui servidor próprio; ele se comunica apenas diretamente com os servidores do Google.
+
+### 2.3. Dados armazenados localmente no seu computador
+
+Para funcionar corretamente entre uma sessão e outra, o Aplicativo grava, apenas no seu próprio computador (nunca em servidores externos):
+
+- O token de autenticação do Google, protegido por criptografia do próprio Windows (DPAPI), vinculada ao seu usuário do Windows
+- Um arquivo de "checkpoint" de sessão, usado para retomar downloads interrompidos (contém o link, a pasta de destino e a lista de arquivos — **nunca a senha**)
+- Preferências simples do aplicativo (por exemplo, se você já respondeu à pergunta sobre criar um atalho na área de trabalho)
+
+Esses arquivos ficam na pasta `%LOCALAPPDATA%\PciDownloader\` do seu perfil do Windows e são removidos automaticamente ao concluir um processo com sucesso (no caso do checkpoint), ou permanecem até você desinstalar o Aplicativo ou desconectar sua conta.
+
+### 2.4. Registro de ações (log) — exportação manual e opcional
+
+O Aplicativo mantém, durante a execução, um histórico técnico das ações realizadas (validações, downloads, erros), para fins de diagnóstico.
+
+Esse registro **só sai do seu computador se você mesmo decidir exportá-lo** (opção "Exportar registro de ações", em Configurações), com o objetivo de enviá-lo à Polícia Científica em caso de erro. Esse arquivo:
+
+- É criptografado (RSA + AES) antes de ser salvo, de forma que **somente a equipe de desenvolvimento**, com a chave privada correspondente, consegue abri-lo
+- Pode conter dados sensíveis inseridos por você durante o uso (como a senha do arquivo compactado e o link do laudo), incluídos **de propósito** para permitir diagnóstico técnico preciso
+- Nunca é enviado automaticamente pelo Aplicativo — o envio (por exemplo, por e-mail) é sempre uma ação manual sua
+
+---
+
+## 3. Uso dos Dados do Google (Google API Services User Data Policy)
+
+O uso e a transferência, pelo Aplicativo, de informações recebidas das APIs do Google seguem a [Política de Dados do Usuário dos Serviços de API do Google](https://developers.google.com/terms/api-services-user-data-policy), incluindo os requisitos de **Uso Limitado** (*Limited Use*):
+
+- Os dados obtidos através da API do Google Drive são usados **exclusivamente** para permitir que você baixe os arquivos de laudo autorizados
+- Esses dados **não são usados para publicidade**
+- Esses dados **não são vendidos, alugados ou compartilhados** com terceiros
+- Esses dados **não são utilizados para treinar modelos de inteligência artificial ou aprendizado de máquina**
+- Nenhum humano, exceto você mesmo, tem acesso ao conteúdo dos arquivos baixados através do Aplicativo
+
+---
+
+## 4. Por quanto tempo os dados ficam armazenados
+
+- **Token de autenticação Google**: até você clicar em "Desconectar" (em Configurações) ou desinstalar o Aplicativo
+- **Checkpoint de sessão**: até a conclusão bem-sucedida do processo de download, ou até você optar por descartá-lo manualmente
+- **Link, senha e pasta de destino informados**: mantidos apenas em memória durante a execução; não persistem após o fechamento do Aplicativo, exceto se você optar por exportar o registro de ações (item 2.4)
+
+---
+
+## 5. Como revogar o acesso do Aplicativo à sua Conta Google
+
+Você pode revogar o acesso a qualquer momento de duas formas:
+
+1. **Dentro do Aplicativo**: Configurações → Conta Google → "Desconectar"
+2. **Diretamente pelo Google**: acesse [myaccount.google.com/permissions](https://myaccount.google.com/permissions), localize "PCI/SC Downloader de Relatórios Digitais" na lista de apps conectados, e remova o acesso
+
+---
+
+## 6. Seus direitos (Lei Geral de Proteção de Dados — Lei nº 13.709/2018)
+
+Como titular dos dados, você tem direito a, mediante solicitação ao contato indicado na seção 1:
+
+- Confirmar a existência de tratamento dos seus dados
+- Acessar os dados armazenados
+- Corrigir dados incompletos, inexatos ou desatualizados
+- Solicitar a exclusão de dados tratados com o seu consentimento
+- Revogar o consentimento a qualquer momento
+
+---
+
+## 7. Segurança
+
+- O token de autenticação é armazenado criptografado via DPAPI (Data Protection API do Windows), vinculado ao seu usuário do sistema operacional — ilegível por qualquer outro usuário ou computador
+- O registro de ações exportável é protegido por criptografia híbrida RSA-2048 + AES-256
+- A comunicação com os servidores do Google ocorre exclusivamente via HTTPS/TLS
+
+---
+
+## 8. Uso por menores de idade
+
+O Aplicativo é destinado a uso profissional/institucional por peritos e servidores da Polícia Científica de Santa Catarina e de outros órgãos autorizados, não sendo direcionado a menores de idade.
+
+---
+
+## 9. Alterações a esta Política
+
+Esta Política pode ser atualizada periodicamente. A data da última atualização está indicada no topo deste documento. Alterações significativas serão comunicadas através dos canais oficiais da Polícia Científica de Santa Catarina.
+
+---
+
+## 10. Contato
+
+Dúvidas sobre esta Política de Privacidade ou sobre o tratamento de dados pelo Aplicativo podem ser enviadas para: **rafael.schneider@policiacientifica.sc.gov.br**
